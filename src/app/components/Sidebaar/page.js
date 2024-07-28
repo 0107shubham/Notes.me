@@ -23,6 +23,12 @@ const Category = [
     link: "javascript",
     category: [{ id: 1, name: "Promise", link: "PromisesComponent" }],
   },
+  {
+    id: 4,
+    name: "Database",
+    link: "",
+    category: [{ id: 1, name: "Prisma", link: "prisma" }],
+  },
 ];
 
 const Sidebar = () => {
