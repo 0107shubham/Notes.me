@@ -29,6 +29,12 @@ const Category = [
     link: "",
     category: [{ id: 1, name: "Prisma", link: "prisma" }],
   },
+  {
+    id: 5,
+    name: "boiler code",
+    link: "",
+    category: [{ id: 1, name: "express", link: "sampleCode" }],
+  },
 ];
 
 const Sidebar = () => {
