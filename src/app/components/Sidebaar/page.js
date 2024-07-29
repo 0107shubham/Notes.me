@@ -35,6 +35,11 @@ const Category = [
     link: "",
     category: [{ id: 1, name: "express", link: "sampleCode" }],
   },
+  {
+    id: 5,
+    name: "Typescript",
+    link: "typescript",
+  },
 ];
 
 const Sidebar = () => {
