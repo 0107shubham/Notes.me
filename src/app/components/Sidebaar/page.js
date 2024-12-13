@@ -40,6 +40,16 @@ const Category = [
     name: "Typescript",
     link: "typescript",
   },
+  {
+    id: 6,
+    name: "performance",
+    link: "performance",
+  },
+  {
+    id: 7,
+    name: "React",
+    link: "React",
+  },
 ];
 
 const Sidebar = () => {
