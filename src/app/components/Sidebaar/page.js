@@ -47,8 +47,8 @@ const Category = [
   },
   {
     id: 7,
-    name: "React",
-    link: "React",
+    name: "react",
+    link: "react",
   },
 ];
 
