@@ -1,7 +1,7 @@
 // components/PromisesComponent.js
 import React from "react";
 
-const PromisesComponent = () => {
+const page = () => {
   return (
     <div className="prose mx-auto p-6">
       <h1>Promises in JavaScript</h1>
@@ -324,4 +324,4 @@ Promise.all([promise1, promise2])
   );
 };
 
-export default PromisesComponent;
+export default page;

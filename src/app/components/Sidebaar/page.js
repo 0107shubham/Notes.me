@@ -19,9 +19,8 @@ const Category = [
   },
   {
     id: 3,
-    name: "JAVAScript",
-    link: "javascript",
-    category: [{ id: 1, name: "Promise", link: "PromisesComponent" }],
+    name: "JavaScript",
+    link: "Javascript",
   },
   {
     id: 4,
@@ -50,11 +49,16 @@ const Category = [
     name: "react",
     link: "react",
   },
+  {
+    id: 7,
+    name: "frontend system design",
+    link: "frontend-system-design",
+  },
 ];
 
 const Sidebar = () => {
   return (
-    <div className="w-full bg-gray-400 h-screen p-4">
+    <div className="w-full bg-gray-400 h-screen overflow-y-scroll p-4">
       <ul className="flex flex-col gap-3">
         {Category.map((items) => (
           <li className="bg-slate-800 text-white p-2 rounded" key={items.id}>
