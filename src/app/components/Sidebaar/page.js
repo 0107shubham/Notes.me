@@ -50,15 +50,25 @@ const Category = [
     link: "react",
   },
   {
-    id: 7,
-    name: "frontend system design",
-    link: "frontend-system-design",
+    id: 10,
+    name: "Networking",
+    link: "Networking",
+  },
+  {
+    id: 8,
+    name: "Operating System",
+    link: "operating-system",
+  },
+  {
+    id: 9,
+    name: "git",
+    link: "git",
   },
 ];
 
 const Sidebar = () => {
   return (
-    <div className="w-full bg-gray-400 h-screen overflow-y-scroll p-4">
+    <div className="w-full bg-gray-400 h-screen overflow-y-scroll p-4 pb-10">
       <ul className="flex flex-col gap-3">
         {Category.map((items) => (
           <li className="bg-slate-800 text-white p-2 rounded" key={items.id}>
