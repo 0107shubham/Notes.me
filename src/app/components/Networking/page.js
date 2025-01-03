@@ -27,6 +27,7 @@ const Page = () => {
           Network ki complexity ko kam karne ke liye, usse ek stack of layers
           mein organize kiya jaata hai.
         </p>
+
         <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed">
           <li>
             <strong>Layers ka role:</strong> Har layer apne upar waali layer ko
@@ -39,6 +40,10 @@ const Page = () => {
             liye responsible hoti hai.
           </li>
         </ul>
+        <img
+          src="https://res.cloudinary.com/drvjsegeb/image/upload/v1735812831/networkmodel_iwfu0e.webp"
+          alt="net1"
+        />
         <p className="text-gray-700 text-lg leading-relaxed">
           Yeh layering approach communication process ko systematic aur
           efficient banati hai.
@@ -56,6 +61,10 @@ const Page = () => {
           network access layer) tak data pahunchta hai, jo data ko receiving
           device tak transmit karti hai.
         </p>
+        <img
+          src="https://res.cloudinary.com/drvjsegeb/image/upload/v1735812831/networkmodel_iwfu0e.webp"
+          alt="net1"
+        />
         <p className="text-gray-700 text-lg leading-relaxed">
           Receiving device is process ko ulta karta hai:
         </p>
@@ -126,6 +135,14 @@ const Page = () => {
         <h2 className="text-2xl font-bold text-gray-800 mt-8">
           TCP/IP Network Model
         </h2>
+        <img
+          src="https://res.cloudinary.com/drvjsegeb/image/upload/v1735812831/networkmodel_iwfu0e.webp"
+          alt="net1"
+        />
+        <img
+          src="https://res.cloudinary.com/drvjsegeb/image/upload/v1735812831/networkmodel_iwfu0e.webp"
+          alt="net1"
+        />
         <p className="text-gray-700 text-lg leading-relaxed">
           Is model ko samajhne ke liye layers ko ek package delivery ke example
           se samjha jaa sakta hai:

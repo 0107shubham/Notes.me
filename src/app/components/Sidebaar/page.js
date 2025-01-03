@@ -6,7 +6,6 @@ const Category = [
     id: 1,
     name: "Node",
     link: "node",
-    category: [{ id: 1, name: "", link: "PromisesComponent" }],
   },
   {
     id: 2,
@@ -63,6 +62,11 @@ const Category = [
     id: 9,
     name: "git",
     link: "git",
+  },
+  {
+    id: 11,
+    name: "Database",
+    link: "Database",
   },
 ];
 
