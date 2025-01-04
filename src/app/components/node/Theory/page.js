@@ -326,6 +326,130 @@ console.log(subtract(5, 3));  // Output: 2`}
         alt="node11"
         className="w-full h-fit"
       />
+
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+        <h1 className="text-3xl font-semibold text-center text-teal-600 mb-6">
+          Thread Pool in Node.js
+        </h1>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-medium text-teal-600 mb-2">
+            Thread Pool Kya Hai?
+          </h2>
+          <p className="text-gray-700">
+            Node.js ek asynchronous, event-driven runtime hai jo single-threaded
+            hota hai, lekin heavy I/O operations (jaise ki file system access,
+            database queries, etc.) ke liye thread pool ka use karta hai. Yeh
+            thread pool, Node.js ke <code>libuv</code> library ke through manage
+            hota hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-medium text-teal-600 mb-2">
+            Node.js Mein Thread Pool Ka Use
+          </h2>
+          <p className="text-gray-700">
+            Node.js ka main thread event loop pe kaam karta hai. Jab bhi ek
+            blocking task (jo CPU-bound ho ya IO-bound ho) aata hai, wo main
+            event loop ko block nahi karta. Uske liye ek thread pool ka use hota
+            hai, jo multiple threads ka collection hota hai aur wo tasks ko
+            background mein process karta hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-medium text-teal-600 mb-2">
+            Thread Pool ka Mechanism
+          </h2>
+          <ol className="list-decimal pl-6 text-gray-700">
+            <li>
+              <strong>libuv:</strong> Node.js ke underlying library, jo
+              asynchronous I/O operations ko handle karti hai, usme thread pool
+              ka concept hota hai.
+            </li>
+            <li>
+              <strong>Blocking Operations:</strong> Jab aap file read/write, DNS
+              query, ya cryptographic operations karte ho, Node.js ye tasks
+              thread pool mein bhejta hai taaki event loop freely continue kar
+              sake.
+            </li>
+            <li>
+              <strong>Thread Pool Size:</strong> By default, thread pool size 4
+              hoti hai. Iska matlab hai ki maximum 4 threads ek time pe
+              background tasks ko handle kar sakte hain. Agar zyada threads ki
+              zarurat ho, toh aap apni <code>UV_THREADPOOL_SIZE</code>{" "}
+              environment variable se size increase kar sakte ho.
+              <br />
+              Example:
+              <pre className="bg-gray-100 p-2 rounded-md mt-2">
+                UV_THREADPOOL_SIZE=8 node app.js
+              </pre>
+            </li>
+            <li>
+              <strong>Non-blocking I/O Operations:</strong> Yeh operations main
+              event loop pe hi execute hote hain, jese ki HTTP requests, Express
+              routes, etc., jisme callback functions asynchronous tareeke se
+              call hote hain aur thread pool ka use nahi hota.
+            </li>
+          </ol>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-medium text-teal-600 mb-2">
+            Thread Pool ka Use Case Example
+          </h2>
+          <p className="text-gray-700">Agar aapko ek file ko read karna ho:</p>
+          <ol className="list-decimal pl-6 text-gray-700">
+            <li>
+              Node.js apne main event loop ko block nahi karta. File read
+              operation ko <code>libuv</code> ko pass karta hai.
+            </li>
+            <li>
+              <code>libuv</code> thread pool mein available thread ko allocate
+              karta hai aur file ko read karta hai.
+            </li>
+            <li>
+              Jab file read ho jata hai, wo thread apne result ko main thread ko
+              return karta hai, aur main thread phir se event loop pe kaam
+              continue karta hai.
+            </li>
+          </ol>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-medium text-teal-600 mb-2">
+            Thread Pool Limitations
+          </h2>
+          <ul className="list-disc pl-6 text-gray-700">
+            <li>
+              <strong>CPU-bound tasks:</strong> Agar aapka code zyada CPU-bound
+              hai (jaise image processing, mathematical computation), toh yeh
+              thread pool ek limitation create kar sakta hai. Iske liye aap
+              worker threads ka use kar sakte hain jo multiple threads ko
+              parallelly handle karte hain.
+            </li>
+            <li>
+              <strong>Concurrency Issues:</strong> Agar thread pool full ho jata
+              hai aur ek aur heavy task aata hai, toh wo task wait kar sakta
+              hai. Isliye thread pool size ko carefully handle karna zaruri hai.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-medium text-teal-600 mb-2">
+            Conclusion
+          </h2>
+          <p className="text-gray-700">
+            Node.js ki efficiency tabhi aati hai jab hum asynchronous I/O ko
+            samajhkar design karte hain. Thread pool ke concept ko samajhna
+            important hai, kyunki ye background tasks ko handle karta hai aur
+            main event loop ko block hone se bachata hai, jisse application
+            zyada responsive rahe.
+          </p>
+        </section>
+      </div>
     </div>
   );
 };
