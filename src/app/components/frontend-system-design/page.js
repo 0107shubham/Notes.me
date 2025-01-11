@@ -7,6 +7,11 @@ const Category = [
     name: "CommunicationProtocall",
     link: "CommunicationProtocall",
   },
+  {
+    id: 2,
+    name: "Communication",
+    link: "Communication",
+  },
 ];
 
 const page = () => {

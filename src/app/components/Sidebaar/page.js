@@ -28,7 +28,7 @@ const Category = [
     category: [{ id: 1, name: "Prisma", link: "prisma" }],
   },
   {
-    id: 5,
+    id: 55,
     name: "boiler code",
     link: "",
     category: [{ id: 1, name: "express", link: "sampleCode" }],
@@ -67,6 +67,11 @@ const Category = [
     id: 11,
     name: "Database",
     link: "Database",
+  },
+  {
+    id: 12,
+    name: "frontend-system-design",
+    link: "frontend-system-design",
   },
 ];
 
